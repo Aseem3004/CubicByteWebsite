@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cubic Byte | Innovating Digital Solutions</title>
+  <link rel="icon" type="image/png" href="images/Logo.jpg"/>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS (Scroll animation) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="images/Logo.jpg" alt="Cubic Byte" width="38" class="me-2 align-text-top">
+        Cubic Byte
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#founders">Founders</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero-section d-flex align-items-center">
+    <!-- Floating metallic icons -->
+    <div class="floating-icons" aria-hidden="true">
+  <i class="fa-solid fa-laptop-code"></i>
+  <i class="fa-solid fa-code"></i>
+  <i class="fa-solid fa-terminal"></i>
+  <i class="fa-solid fa-microchip"></i>
+  <i class="fa-solid fa-robot"></i>
+  <i class="fa-solid fa-database"></i>
+  <i class="fa-solid fa-cloud"></i>
+  <i class="fa-solid fa-globe"></i>
+  <i class="fa-solid fa-server"></i>
+  <i class="fa-solid fa-cube"></i>
+  <i class="fa-solid fa-network-wired"></i>
+  <i class="fa-solid fa-mobile-screen"></i>
+  <i class="fa-solid fa-brain"></i>
+  <i class="fa-solid fa-bug"></i>
+  <i class="fa-solid fa-code-branch"></i>
+  <i class="fa-solid fa-key"></i>
+  <i class="fa-solid fa-gear"></i>
+  <i class="fa-solid fa-shield-halved"></i>
+  <i class="fa-solid fa-wifi"></i>
+  <i class="fa-solid fa-rocket"></i>
+</div>
+
+
+    <div class="container">
+      <div class="row align-items-center justify-content-center hero-grid">
+        <!-- LEFT: LOGO + TEXT -->
+        <div class="col-xl-6 col-lg-6 col-md-10" data-aos="fade-right">
+          <div class="brand-stack">
+            <img src="images/Logo.jpg" alt="Cubic Byte Logo" class="logo-emboss">
+            <h1 class="display-5 fw-bold metallic-text mt-4">Innovating Digital Solutions</h1>
+            <p class="lead subtle mt-2">Premium engineering for web, apps & AI — crafted with precision.</p>
+            <div class="mt-4">
+              <a href="#about" class="btn btn-metal btn-lg me-2">Explore</a>
+              <a href="#contact" class="btn btn-outline-metal btn-lg">Contact</a>
+            </div>
+          </div>
+        </div>
+            
+
+
+        <!-- RIGHT: ROBOT SVG + MESSAGE -->
+        <div class="col-xl-6 col-lg-6 col-md-10 robot-col" data-aos="zoom-in">
+          <div class="robot-wrap" id="robotWrap" aria-hidden="true">
+            <svg class="robot-svg" width="340" height="340" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <!-- soft white glow -->
+                <radialGradient id="rgGlow" cx="50%" cy="50%" r="60%">
+                  <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+                  <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+                </radialGradient>
+                <!-- metallic gradients -->
+                <linearGradient id="metalDark" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#1b1b1b"/>
+                  <stop offset="100%" stop-color="#2a2a2a"/>
+                </linearGradient>
+                <linearGradient id="metalLight" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#cfcfcf"/>
+                  <stop offset="50%" stop-color="#9e9e9e"/>
+                  <stop offset="100%" stop-color="#e5e5e5"/>
+                </linearGradient>
+              </defs>
+               
+              <!-- background glow disc -->
+              <circle cx="160" cy="160" r="140" fill="url(#rgGlow)" opacity="0.18"/>
+
+              <!-- head -->
+              <rect x="75" y="68" width="170" height="145" rx="52" fill="url(#metalLight)" stroke="#bfbfbf" stroke-width="3"/>
+              <!-- visor -->
+              <rect x="105" y="108" width="110" height="70" rx="28" fill="url(#metalDark)"/>
+              <!-- eyes -->
+              <circle cx="135" cy="143" r="9" fill="#f2f2f2"/>
+              <circle cx="185" cy="143" r="9" fill="#f2f2f2"/>
+              <!-- smile -->
+              <path d="M135 163 Q160 178 185 163" stroke="#d9d9d9" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <!-- antenna -->
+              <line x1="160" y1="40" x2="160" y2="66" stroke="#dcdcdc" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="160" cy="34" r="10" fill="#ffffff" opacity="0.9"/>
+              <!-- neck / body base -->
+              <rect x="118" y="215" width="85" height="55" rx="24" fill="url(#metalLight)" stroke="#bfbfbf" stroke-width="3"/>
+            </svg>
+
+            <!-- Robot Message -->
+            <div class="robot-message">
+              <span id="robotText"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-5 bg-deep">
+    <div class="container text-center" data-aos="fade-up">
+      <h2 class="fw-bold metallic-text mb-3">About Us</h2>
+      <p class="lead subtle">We architect reliable products with enterprise-grade polish: web platforms, mobile apps, and AI systems — engineered the Cubic Byte way.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-5 bg-darker text-center">
+    <div class="container">
+      <h2 class="fw-bold metallic-text mb-5" data-aos="fade-up">Our Services</h2>
+      <div class="row g-4">
+        <div class="col-md-3" data-aos="fade-up"><div class="service-card"><i class="fa-solid fa-code"></i><h5>Web Development</h5><p>High-performance, accessible, SEO-ready.</p></div></div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="100"><div class="service-card"><i class="fa-solid fa-mobile-screen"></i><h5>App Development</h5><p>Android & cross-platform excellence.</p></div></div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200"><div class="service-card"><i class="fa-solid fa-robot"></i><h5>AI Solutions</h5><p>Automation, analytics, assistants.</p></div></div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="300"><div class="service-card"><i class="fa-solid fa-paintbrush"></i><h5>Branding</h5><p>Identity, UI kits, design systems.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDERS -->
+  <section id="founders" class="py-5 bg-deep text-center">
+    <div class="container">
+      <h2 class="fw-bold metallic-text mb-5" data-aos="fade-up">Founders</h2>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="zoom-in"><div class="founder-card"><img src="images/founder1.jpg" class="founder-img rounded-circle" alt="Zaid Pharas"><h5 class="mt-3">Zaid Pharas</h5><p>Founder Of Cubic Byte</p></div></div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100"><div class="founder-card"><img src="images/founder2.jpg" class="founder-img rounded-circle" alt="Aseem Gulbarga"><h5 class="mt-3">Aseem Gulbarga</h5><p>Founder Of Cubic Byte</p></div></div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200"><div class="founder-card"><img src="images/founder3.jpg" class="founder-img rounded-circle" alt="Manoj Jeur"><h5 class="mt-3">Manoj  Jeur</h5><p>Founder Of Cubic Byte</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-5 bg-darker text-center">
+    <div class="container" data-aos="fade-up">
+      <h2 class="fw-bold metallic-text mb-3">Get in Touch</h2>
+      <form class="contact-form mx-auto" style="max-width: 600px;">
+        <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+        <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+        <textarea class="form-control mb-3" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn btn-metal">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-4 bg-deep subtle">
+    <p class="mb-0">© 2025 Cubic Byte. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+<div class="robot-wrap" id="robotWrap" aria-hidden="true">
+  <svg class="robot-svg" width="340" height="340" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+    <!-- SVG content -->
+  </svg>
+
+  <!-- Robot Message -->
+  <div class="robot-message">
+    <span id="robotText"></span>
+  </div>
+</div>
