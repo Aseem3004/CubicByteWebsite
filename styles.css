@@ -75,6 +75,12 @@ body{cursor:none;overflow-x:hidden}
   background:linear-gradient(180deg,#f5f5f5 0%,#bfbfbf 40%,#8f8f8f 60%,#eaeaea 100%);
   -webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 1px 0 #898888;
 }
+#services h2 {
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  letter-spacing: 1px;
+}
+
 .subtle{opacity:.85}
 
 /* Buttons */
@@ -214,4 +220,88 @@ body{cursor:none;overflow-x:hidden}
 
 @keyframes blink {
   50% { opacity: 0; }
+}
+/* ===== Our Services Section (Enlarged and Premium Look) ===== */
+#services {
+  padding: 120px 0; /* more height */
+}
+
+.service-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 22px;
+  padding: 50px 35px; /* bigger cards */
+  height: 100%;
+  box-shadow: 0 20px 80px rgba(255, 255, 255, 0.05);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  backdrop-filter: blur(6px);
+}
+
+.service-card i {
+  font-size: 60px; /* larger icons */
+  color: var(--accent);
+  margin-bottom: 20px;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.service-card h5 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 15px;
+  color: #e6e6e6;
+}
+
+.service-card p {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #bfbfbf;
+  line-height: 1.6;
+}
+
+.service-card:hover {
+  transform: translateY(-14px) scale(1.03);
+  box-shadow: 0 25px 100px rgba(255, 255, 255, 0.08);
+}
+/* ===== PROJECTS SECTION ===== */
+#projects {
+  padding: 120px 0;
+}
+
+#projects h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.project-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 22px;
+  padding: 50px 45px;
+  box-shadow: 0 20px 80px rgba(255,255,255,0.05);
+  backdrop-filter: blur(6px);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 30px 100px rgba(255,255,255,0.08);
+}
+
+.project-card h4 {
+  font-size: 1.9rem;
+  background: linear-gradient(90deg, #55ceb8ae, #bfbfbf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.project-card p {
+  color: #bfbfbf;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.project-card a.btn {
+  margin-top: 12px;
+  border-radius: 10px;
 }
