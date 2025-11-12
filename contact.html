@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Cubic Byte</title>
+  <link rel="icon" type="image/png" href="images/Logo.jpg"/>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- AOS (Scroll Animation) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <img src="images/Logo.jpg" alt="Cubic Byte" width="38" class="me-2 align-text-top">
+        Cubic Byte
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-5 bg-darker text-center">
+    <div class="container" data-aos="fade-up"><br><br><br><br><br><br>
+      <h2 class="fw-bold metallic-text mb-3">Get in Touch</h2>
+      <p class="lead subtle mb-5"><br><br>
+        We’d love to collaborate with you! Whether you have a project idea, need a design, or want to build something great —  
+        drop us a message and we’ll get back to you soon.
+      </p>
+
+      <!-- CONTACT FORM -->
+      <form id="contactForm" class="contact-form mx-auto" style="max-width: 600px;">
+        <div class="mb-3">
+          <input type="text" id="contactName" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="mb-3">
+          <input type="email" id="contactEmail" class="form-control" placeholder="Your Email" required>
+        </div>
+        <div class="mb-3">
+          <textarea id="contactMessage" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-metal btn-lg mt-2">
+          <i class="fa-solid fa-paper-plane me-2"></i>Send Message
+        </button>
+      </form>
+
+      <!-- STATUS MESSAGE -->
+      <div id="contactStatus" class="mt-4 fw-bold"></div>
+
+      <!-- CONTACT INFO -->
+      <div class="mt-5 subtle">
+        <p><i class="fa-solid fa-envelope me-2"></i> support@cubicbyte.in</p>
+        <p><i class="fa-solid fa-phone me-2"></i> +91 98765 43210</p>
+        <p><i class="fa-solid fa-location-dot me-2"></i> Pune, Maharashtra, India</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-4 bg-deep subtle">
+    <p class="mb-0">© 2025 Cubic Byte. All rights reserved.</p>
+  </footer>
+
+  <!-- Firebase + Form Script -->
+  <script type="module">
+    // Import Firebase SDKs
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+    // --- Firebase Configuration ---
+    const firebaseConfig = {
+      apiKey: "AIzaSyBi80XaIvszibH8_eMAVvXTqzUDKwjNDP0",
+      authDomain: "cubic-9910b.firebaseapp.com",
+      projectId: "cubic-9910b",
+      storageBucket: "cubic-9910b.firebasestorage.app",
+      messagingSenderId: "47636641291",
+      appId: "1:47636641291:web:64298e4eb1e6fce473f90e",
+      measurementId: "G-P7CH7PWVFX"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // Contact Form Submit
+    const contactForm = document.getElementById("contactForm");
+    const contactStatus = document.getElementById("contactStatus");
+
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById("contactName").value.trim();
+      const email = document.getElementById("contactEmail").value.trim();
+      const message = document.getElementById("contactMessage").value.trim();
+
+      if (!name || !email || !message) {
+        contactStatus.innerHTML = `<span style="color:orange;">⚠️ Please fill all required fields.</span>`;
+        return;
+      }
+
+      try {
+        await addDoc(collection(db, "contactMessages"), {
+          name,
+          email,
+          message,
+          createdAt: serverTimestamp()
+        });
+
+        contactStatus.innerHTML = `<span style="color:#00ff7f;">✅ Thank you, ${name}! Your message has been sent successfully.</span>`;
+        contactForm.reset();
+      } catch (error) {
+        console.error("Error submitting contact form:", error);
+        contactStatus.innerHTML = `<span style="color:#ff4c4c;">❌ Error: ${error.message}</span>`;
+      }
+    });
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

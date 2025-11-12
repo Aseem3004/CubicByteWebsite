@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services | Cubic Byte</title>
+  <link rel="icon" type="image/png" href="images/Logo.jpg"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <img src="images/Logo.jpg" alt="Cubic Byte" width="38" class="me-2 align-text-top">
+        Cubic Byte
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SERVICES SECTION -->
+  <section id="services" class="py-5 bg-darker text-center" style="margin-top: 90px;">
+    <div class="container">
+      <h2 class="fw-bold metallic-text mb-4">Our Services</h2>
+      <p class="lead subtle mb-5">
+        At <strong>Cubic Byte</strong>, we specialize in building next-generation digital solutions — from interactive websites and mobile apps to stunning UI/UX and design experiences.
+      </p>
+
+      <div class="row g-4">
+        <!-- 1. Web Development -->
+        <div class="col-md-4 col-lg-4" data-aos="fade-up">
+          <div class="service-card">
+            <i class="fa-solid fa-code fa-3x mb-3"></i>
+            <h5>Web Development</h5>
+            <p>We craft responsive, high-performance, SEO-optimized websites using the latest tech stacks for your business or brand.</p>
+          </div>
+        </div>
+
+        <!-- 2. Web Apps -->
+        <div class="col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card">
+            <i class="fa-solid fa-laptop-code fa-3x mb-3"></i>
+            <h5>Web Applications</h5>
+            <p>We design scalable, interactive web applications that streamline workflows and enhance digital experiences.</p>
+          </div>
+        </div>
+
+        <!-- 3. Mobile App Development -->
+        <div class="col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card">
+            <i class="fa-solid fa-mobile-screen-button fa-3x mb-3"></i>
+            <h5>Android App Development</h5>
+            <p>Our expert developers create custom Android apps with user-friendly UI, robust performance, and security in mind.</p>
+          </div>
+        </div>
+
+        <!-- 4. UI/UX & Branding -->
+        <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card">
+            <i class="fa-solid fa-paintbrush fa-3x mb-3"></i>
+            <h5>UI/UX Design & Branding</h5>
+            <p>We build visually stunning designs and interfaces that reflect your brand identity, keeping user experience at the center.</p>
+          </div>
+        </div>
+
+        <!-- 5. Graphic Design -->
+        <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-card">
+            <i class="fa-solid fa-pen-nib fa-3x mb-3"></i>
+            <h5>Graphic Design</h5>
+            <p>From posters and banners to logos and digital creatives, our graphic designers ensure your brand looks unforgettable.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Floating Background Icons -->
+<div class="floating-icons" aria-hidden="true">
+  <i class="fa-solid fa-code"></i>
+  <i class="fa-solid fa-microchip"></i>
+  <i class="fa-solid fa-terminal"></i>
+  <i class="fa-solid fa-cloud"></i>
+  <i class="fa-solid fa-cube"></i>
+  <i class="fa-solid fa-brain"></i>
+  <i class="fa-solid fa-wifi"></i>
+  <i class="fa-solid fa-robot"></i>
+  <i class="fa-solid fa-globe"></i>
+  <i class="fa-solid fa-database"></i>
+</div>
+<section id="services" class="py-5 bg-darker text-center" style="margin-top: 90px;">
+    <h2>Our Service Form 
+        
+    </h2>
+      <!-- Service Form -->
+      <form id="serviceForm" class="contact-form mx-auto" style="max-width: 600px;">
+        <input type="text" id="name" class="form-control mb-3" placeholder="Your Name" required>
+        <input type="email" id="email" class="form-control mb-3" placeholder="Your Email" required>
+        <input type="text" id="service" class="form-control mb-3" placeholder="Service Required" required>
+        <textarea id="message" class="form-control mb-3" rows="4" placeholder="Additional Details"></textarea>
+        <button type="submit" class="btn btn-metal btn-lg w-100">Submit Request</button>
+      </form>
+
+      <!-- Status Message -->
+      <div id="status" class="mt-4 text-center fw-bold"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-4 bg-deep subtle">
+    <p class="mb-0">© 2025 Cubic Byte. All rights reserved.</p>
+  </footer>
+
+  <!-- Firebase Integration -->
+  <script type="module">
+    // Import Firebase SDKs
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+    // Firebase Config
+    const firebaseConfig = {
+      apiKey: "AIzaSyBi80XaIvszibH8_eMAVvXTqzUDKwjNDP0",
+      authDomain: "cubic-9910b.firebaseapp.com",
+      projectId: "cubic-9910b",
+      storageBucket: "cubic-9910b.firebasestorage.app",
+      messagingSenderId: "47636641291",
+      appId: "1:47636641291:web:64298e4eb1e6fce473f90e",
+      measurementId: "G-P7CH7PWVFX"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // Form Submit
+    const form = document.getElementById("serviceForm");
+    const status = document.getElementById("status");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const service = document.getElementById("service").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (!name || !email || !service) {
+        status.innerHTML = `<span style="color:orange;">⚠️ Please fill all required fields.</span>`;
+        return;
+      }
+
+      try {
+        await addDoc(collection(db, "serviceRequests"), {
+          name,
+          email,
+          service,
+          message,
+          createdAt: serverTimestamp()
+        });
+
+        status.innerHTML = `<span style="color:#00ff7f;">✅ Thank you, ${name}! Your service request has been submitted successfully.</span>`;
+        form.reset();
+      } catch (error) {
+        console.error("Error adding document: ", error);
+        status.innerHTML = `<span style="color:#ff4c4c;">❌ Error: ${error.message}</span>`;
+      }
+    });
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
