@@ -557,3 +557,22 @@ section{position:relative}
   margin-top: 10px;
   font-weight: 500;
 }
+/* ===== Fix Contact Form Text Visibility ===== */
+.contact-form input,
+.contact-form textarea {
+  color: #ffffff !important; /* text color */
+  font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #bfbfbf !important;  /* lighter placeholder */
+  opacity: 1;
+}
+
+/* Fix background too dark */
+.contact-form input,
+.contact-form textarea {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
