@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cubic Byte | Innovating Digital Solutions</title>
-  <link rel="icon" href="/Logo.png" type="image/png">
-  <meta name="description" content="CubicByte provides professional website development, web applications, digital creation, and modern UI/UX solutions at affordable pricing.">
 
+  <link rel="icon" href="Logo.png" type="image/png">
+  <meta name="description" content="CubicByte provides professional website development, web applications, digital creation, and modern UI/UX solutions at affordable pricing.">
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- AOS (Scroll animation) -->
+  <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- Font Awesome -->
@@ -20,147 +20,81 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <!-- Custom Cursor -->
-  <div class="cursor"></div>
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">
-        <img src="Logo.png" alt="Cubic Byte" width="38" class="me-2 align-text-top">
-        Cubic Byte
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div id="nav" class="collapse navbar-collapse justify-content-end">
-        <ul class="navbar-nav">
-          <ul class="navbar-nav">
-           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-           <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          </ul>
+<!-- Custom Cursor -->
+<div class="cursor"></div>
 
-        </ul>
-      </div>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">
+      <img src="Logo.png" alt="Cubic Byte" width="38" class="me-2 align-text-top">
+      Cubic Byte
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="nav" class="collapse navbar-collapse justify-content-end">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- HERO SECTION -->
-  <section id="home" class="hero-section d-flex align-items-center">
-    <!-- Floating metallic icons -->
-    <div class="floating-icons" aria-hidden="true">
-  <i class="fa-solid fa-laptop-code"></i>
-  <i class="fa-solid fa-code"></i>
-  <i class="fa-solid fa-terminal"></i>
-  <i class="fa-solid fa-microchip"></i>
-  <i class="fa-solid fa-robot"></i>
-  <i class="fa-solid fa-database"></i>
-  <i class="fa-solid fa-cloud"></i>
-  <i class="fa-solid fa-globe"></i>
-  <i class="fa-solid fa-server"></i>
-  <i class="fa-solid fa-cube"></i>
-  <i class="fa-solid fa-network-wired"></i>
-  <i class="fa-solid fa-mobile-screen"></i>
-  <i class="fa-solid fa-brain"></i>
-  <i class="fa-solid fa-bug"></i>
-  <i class="fa-solid fa-code-branch"></i>
-  <i class="fa-solid fa-key"></i>
-  <i class="fa-solid fa-gear"></i>
-  <i class="fa-solid fa-shield-halved"></i>
-  <i class="fa-solid fa-wifi"></i>
-  <i class="fa-solid fa-rocket"></i>
-</div>
+<!-- HERO SECTION -->
+<section id="home" class="hero-section d-flex align-items-center">
 
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="hero-bg.mp4" type="video/mp4">
+  </video>
 
-    <div class="container">
-      <div class="row align-items-center justify-content-center hero-grid">
-        <!-- LEFT: LOGO + TEXT -->
-        <div class="col-xl-6 col-lg-6 col-md-10" data-aos="fade-right">
-          <div class="brand-stack">
-            <img src="Logo.png" alt="Cubic Byte Logo" class="logo-emboss">
-            <h1 class="display-5 fw-bold metallic-text mt-4">Innovating Digital Solutions</h1>
-            <p class="lead subtle mt-2">Premium engineering for web, apps & AI — crafted with precision.</p>
-            <div class="mt-4">
-              <a href="#about" class="btn btn-metal btn-lg me-2">Explore</a>
-              <a href="#contact" class="btn btn-outline-metal btn-lg">Contact</a>
-            </div>
-          </div>
-        </div>
-            
+  <div class="container">
+    <div class="row align-items-center justify-content-start">
 
-
-        <!-- RIGHT: ROBOT SVG + MESSAGE -->
-        <div class="col-xl-6 col-lg-6 col-md-10 robot-col" data-aos="zoom-in">
-          <div class="robot-wrap" id="robotWrap" aria-hidden="true">
-            <svg class="robot-svg" width="340" height="340" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <!-- soft white glow -->
-                <radialGradient id="rgGlow" cx="50%" cy="50%" r="60%">
-                  <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
-                  <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-                </radialGradient>
-                <!-- metallic gradients -->
-                <linearGradient id="metalDark" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#1b1b1b"/>
-                  <stop offset="100%" stop-color="#2a2a2a"/>
-                </linearGradient>
-                <linearGradient id="metalLight" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#cfcfcf"/>
-                  <stop offset="50%" stop-color="#9e9e9e"/>
-                  <stop offset="100%" stop-color="#e5e5e5"/>
-                </linearGradient>
-              </defs>
-               
-              <!-- background glow disc -->
-              <circle cx="160" cy="160" r="140" fill="url(#rgGlow)" opacity="0.18"/>
-
-              <!-- head -->
-              <rect x="75" y="68" width="170" height="145" rx="52" fill="url(#metalLight)" stroke="#bfbfbf" stroke-width="3"/>
-              <!-- visor -->
-              <rect x="105" y="108" width="110" height="70" rx="28" fill="url(#metalDark)"/>
-              <!-- eyes -->
-              <circle cx="135" cy="143" r="9" fill="#f2f2f2"/>
-              <circle cx="185" cy="143" r="9" fill="#f2f2f2"/>
-              <!-- smile -->
-              <path d="M135 163 Q160 178 185 163" stroke="#d9d9d9" stroke-width="3" fill="none" stroke-linecap="round"/>
-              <!-- antenna -->
-              <line x1="160" y1="40" x2="160" y2="66" stroke="#dcdcdc" stroke-width="4" stroke-linecap="round"/>
-              <circle cx="160" cy="34" r="10" fill="#ffffff" opacity="0.9"/>
-              <!-- neck / body base -->
-              <rect x="118" y="215" width="85" height="55" rx="24" fill="url(#metalLight)" stroke="#bfbfbf" stroke-width="3"/>
-            </svg>
-
-            <!-- Robot Message -->
-            <div class="robot-message">
-              <span id="robotText"></span>
-            </div>
+      <!-- HERO TEXT + LOGO -->
+      <div class="col-xl-6 col-lg-6 col-md-10" data-aos="fade-right">
+        <div class="brand-stack">
+          <img src="Logo.png" alt="Cubic Byte Logo" class="logo-emboss">
+          <h1 class="display-5 fw-bold metallic-text mt-4">Innovating Digital Solutions</h1>
+          <p class="lead subtle mt-2">Premium engineering for web, apps & AI — crafted with precision.</p>
+          <div class="mt-4">
+            <a href="#about" class="btn btn-metal btn-lg me-2">Explore</a>
+            <a href="#contact" class="btn btn-outline-metal btn-lg">Contact</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
- <!-- ABOUT -->
+    </div>
+  </div>
+</section>
+
+
+<!-- ABOUT SECTION -->
 <section id="about" class="py-5 bg-deep text-center">
   <div class="container" data-aos="fade-up">
+
     <h2 class="fw-bold metallic-text mb-4">About Cubic Byte</h2>
 
     <p class="lead subtle">
-      <strong>Cubic Byte</strong> is an independent digital development studio that loves turning ideas into real, high-impact digital products. 
-      We build everything from <strong>dynamic websites</strong> and <strong>web applications</strong> to <strong>Android apps</strong>, <strong>AI-powered tools</strong>, and <strong>creative digital designs</strong> - all crafted with precision, modern technology, and a strong sense of design.
+      <strong>Cubic Byte</strong> is an independent digital development studio that loves turning ideas into high-impact digital products. 
+      We build everything from <strong>dynamic websites</strong> and <strong>web applications</strong> to <strong>Android apps</strong>, 
+      <strong>AI-powered tools</strong>, and <strong>creative digital designs</strong> — all crafted with precision.
     </p>
 
     <p class="lead subtle mt-4">
-      Our company was founded with a clear mission - to make professional-grade digital services accessible to everyone. 
-      At Cubic Byte, we believe great innovation shouldn’t come with a premium price tag. 
-      That’s why we deliver <strong>top-quality solutions at the most affordable rates</strong> in the industry - without compromising performance, design, or support.
+      Our goal is to make professional-grade digital solutions accessible to everyone — delivering 
+      <strong>top-quality services at the most affordable rates</strong>.
     </p>
 
     <p class="lead subtle mt-4">
-      Our multidisciplinary team of <strong>developers, designers, and strategists</strong> specializes in:
+      Our multidisciplinary team specializes in:
     </p>
 
     <div class="row justify-content-center mt-4">
@@ -169,7 +103,7 @@
         <div class="about-card p-3">
           <i class="fa-solid fa-globe fa-2x mb-3"></i>
           <h5>Web & App Development</h5>
-          <p>Creating fast, responsive, and secure websites and Android apps tailored to your goals.</p>
+          <p>Creating fast, responsive, and secure websites and apps tailored to your goals.</p>
         </div>
       </div>
 
@@ -177,7 +111,7 @@
         <div class="about-card p-3">
           <i class="fa-solid fa-brain fa-2x mb-3"></i>
           <h5>AI & Automation</h5>
-          <p>Building smart AI systems and automation tools that make work easier and more efficient.</p>
+          <p>Smart AI systems and automation tools that improve productivity.</p>
         </div>
       </div>
 
@@ -185,7 +119,7 @@
         <div class="about-card p-3">
           <i class="fa-solid fa-palette fa-2x mb-3"></i>
           <h5>Graphic & Brand Design</h5>
-          <p>From <strong>posters</strong> and <strong>logos</strong> to <strong>UI/UX designs</strong> and <strong>social creatives</strong>, we create visuals that make your brand unforgettable.</p>
+          <p>Logos, posters, UI/UX — visuals that make your brand unforgettable.</p>
         </div>
       </div>
 
@@ -193,75 +127,63 @@
   </div>
 </section>
 
-<p class="lead subtle mt-5 text-center ">
-      Every project we work on follows three core principles: <strong>creativity</strong>, <strong>efficiency</strong>, and <strong>affordability</strong>. 
-  Whether you're a business, a startup, or an individual creator, <strong>Cubic Byte</strong> ensures your digital presence looks modern, professional, and truly stands out.
+<p class="lead subtle mt-5 text-center">
+  Every project follows three principles: <strong>creativity</strong>, <strong>efficiency</strong>, and <strong>affordability</strong>.
 </p>
 
 <p class="lead subtle fw-bold mt-3 text-center">
-  "Your vision, our code - premium quality at the lowest possible cost."
+  "Your vision, our code — premium quality at the lowest possible cost."
 </p>
 
-
-  
-
-  <!-- FOUNDERS -->
+<!-- FOUNDERS -->
 <section id="founders" class="py-5 bg-deep text-center">
   <div class="container">
     <h2 class="fw-bold metallic-text mb-5" data-aos="fade-up">Founders</h2>
+
     <div class="row g-4 justify-content-center">
 
-      <!-- Founder 1 -->
+      <!-- Aseem -->
       <div class="col-md-4" data-aos="zoom-in">
         <div class="founder-card">
           <img src="images/founder2.jpg" class="founder-img rounded-circle mb-3" alt="Aseem Gulbarga">
           <h5 class="fw-bold">Aseem Gulbarga</h5>
-          <p class="text-muted mb-2">Founder </p>
-          <div class="social-links">
-            <a href="mailto:gulbargaaseem@gmail.com" class="me-3 text-decoration-none text-light">
-              <i class="fa-solid fa-envelope"></i> gulbargaaseem@gmail.com
-            </a>
-            <br>
-            <a href="https://www.linkedin.com/in/aseem-gulbarga-5704b12b0/" target="_blank" class="text-decoration-none text-info">
-              <i class="fa-brands fa-linkedin fa-lg"></i> LinkedIn
-            </a>
-          </div>
+          <p class="text-muted mb-2">Founder</p>
+          <a href="mailto:gulbargaaseem@gmail.com" class="text-light d-block mb-2">
+            <i class="fa-solid fa-envelope"></i> gulbargaaseem@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/aseem-gulbarga-5704b12b0/" target="_blank" class="text-info">
+            <i class="fa-brands fa-linkedin fa-lg"></i> LinkedIn
+          </a>
         </div>
       </div>
 
-      <!-- Founder 2 -->
+      <!-- Manoj -->
       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
         <div class="founder-card">
           <img src="images/founder3.jpg" class="founder-img rounded-circle mb-3" alt="Manoj Jeur">
           <h5 class="fw-bold">Manoj Jeur</h5>
-          <p class="text-muted mb-2">Founder </p>
-          <div class="social-links">
-            <a href="mailto:manojjeur045@gmail.com" class="me-3 text-decoration-none text-light">
-              <i class="fa-solid fa-envelope"></i> manojjeur045@gmail.com
-            </a>
-            <br>
-            <a href="https://www.linkedin.com/in/manoj-jeur-3845b02b0/" target="_blank" class="text-decoration-none text-info">
-              <i class="fa-brands fa-linkedin fa-lg"></i> LinkedIn
-            </a>
-          </div>
+          <p class="text-muted mb-2">Founder</p>
+          <a href="mailto:manojjeur045@gmail.com" class="text-light d-block mb-2">
+            <i class="fa-solid fa-envelope"></i> manojjeur045@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/manoj-jeur-3845b02b0/" target="_blank" class="text-info">
+            <i class="fa-brands fa-linkedin fa-lg"></i> LinkedIn
+          </a>
         </div>
       </div>
 
-      <!-- Founder 3 -->
+      <!-- Zaid -->
       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
         <div class="founder-card">
           <img src="images/founder1.jpg" class="founder-img rounded-circle mb-3" alt="Zaid Pharas">
           <h5 class="fw-bold">Zaid Pharas</h5>
-          <p class="text-muted mb-2">Founder </p>
-          <div class="social-links">
-            <a href="mailto:pharaszaid@gmail.com" class="me-3 text-decoration-none text-light">
-              <i class="fa-solid fa-envelope"></i> pharaszaid@gmail.com
-            </a>
-            <br>
-            <a href="https://www.linkedin.com/in/zaid-pharas-a736272a0/" target="_blank" class="text-decoration-none text-info">
-              <i class="fa-brands fa-linkedin fa-lg"></i> LinkedIn
-            </a>
-          </div>
+          <p class="text-muted mb-2">Founder</p>
+          <a href="mailto:pharaszaid@gmail.com" class="text-light d-block mb-2">
+            <i class="fa-solid fa-envelope"></i> pharaszaid@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/zaid-pharas-a736272a0/" target="_blank" class="text-info">
+            <i class="fa-brands fa-linkedin fa-lg"></i> LinkedIn
+          </a>
         </div>
       </div>
 
@@ -269,39 +191,31 @@
   </div>
 </section>
 
+<!-- CONTACT -->
+<section id="contact" class="py-5 bg-darker text-center">
+  <div class="container" data-aos="fade-up">
 
-  <!-- CONTACT -->
-  <section id="contact" class="py-5 bg-darker text-center">
-    <div class="container" data-aos="fade-up">
-      <h2 class="fw-bold metallic-text mb-3">Get in Touch</h2>
-      <form class="contact-form mx-auto" style="max-width: 600px;">
-        <input type="text" class="form-control mb-3" placeholder="Your Name" required>
-        <input type="email" class="form-control mb-3" placeholder="Your Email" required>
-        <textarea class="form-control mb-3" rows="4" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn btn-metal">Send Message</button>
-      </form>
-    </div>
-  </section>
+    <h2 class="fw-bold metallic-text mb-3">Get in Touch</h2>
 
-  <!-- FOOTER -->
-  <footer class="text-center py-4 bg-deep subtle">
-    <p class="mb-0">Email : cubicbyte.hr@gmail.com <br>© 2025 Cubic Byte. All rights reserved.</p>
-  </footer>
+    <form class="contact-form mx-auto" style="max-width: 600px;">
+      <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+      <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+      <textarea class="form-control mb-3" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-metal">Send Message</button>
+    </form>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="script.js"></script>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-4 bg-deep subtle">
+  <p class="mb-0">Email : cubicbyte.hr@gmail.com <br> © 2025 Cubic Byte. All rights reserved.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
-<div class="robot-wrap" id="robotWrap" aria-hidden="true">
-  <svg class="robot-svg" width="340" height="340" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
-    <!-- SVG content -->
-  </svg>
-
-  <!-- Robot Message -->
-  <div class="robot-message">
-    <span id="robotText"></span>
-  </div>
-</div>
- 
